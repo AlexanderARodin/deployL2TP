@@ -9,5 +9,5 @@ pre-install:
 	@apt install -y neovim tmux zsh mc tree
 
 install:
-	@apt install -y ===pptpd
+	@apt install -y xl2tpd
 
