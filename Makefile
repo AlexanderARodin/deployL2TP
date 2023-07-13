@@ -16,3 +16,8 @@ xl2tp-install:
 
 xl2tp-replace-configs:
 	@cp -vrf ./rootpath/* /
+
+net-route-configure:
+	@iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+	@echo 1 > /proc/sys/net/ipv4/ip_forward
+	@echo "uncomment <net.ipv4.ip_forward=1> in /etc/sysctl.conf"
