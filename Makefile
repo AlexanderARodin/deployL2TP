@@ -8,6 +8,6 @@ aptupgrade:
 pre-install:
 	@apt install -y neovim tmux zsh mc tree
 
-install:
+install-xl2tp:
 	@apt install -y xl2tpd
 
