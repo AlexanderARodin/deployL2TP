@@ -12,4 +12,4 @@ xl2tp-install:
 	@apt install -y xl2tpd
 
 xl2tp-replace-configs:
-	@cp -vrf ./root/ /
+	@cp -vrf ./rootpath/* /
