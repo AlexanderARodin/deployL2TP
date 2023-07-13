@@ -1,0 +1,6 @@
+ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+asyncmap 0
+auth
+hide-password
+silent
