@@ -2,6 +2,9 @@
 help:
 	@echo 'there is no tips (yet)'
 
+pull:
+	@git pull
+
 aptupgrade:
 	@apt update && apt upgrade
 
