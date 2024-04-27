@@ -1,23 +1,15 @@
-
 help:
-	@echo 'there is no tips (yet)'
+	@less Makefile
 
-pull:
-	@git pull
+.configure:
+	@sudo apt update
+	@sudo apt install -y xl2tpd
 
-aptupgrade:
-	@apt update && apt upgrade
-
-pre-install:
-	@apt install -y neovim tmux zsh mc tree
-
-xl2tp-install:
-	@apt install -y xl2tpd
-
-xl2tp-replace-configs:
-	@cp -vrf ./rootpath/* /
-
-net-route-configure:
-	@iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-	@echo 1 > /proc/sys/net/ipv4/ip_forward
-	@echo "uncomment <net.ipv4.ip_forward=1> in /etc/sysctl.conf"
+journal:
+	@sudo journalctl -xeu xl2tpd
+status:
+	@sudo systemctl status xl2tpd
+restart:
+	@sudo systemctl restart xl2tpd
+stop:
+	@sudo systemctl stop xl2tpd
