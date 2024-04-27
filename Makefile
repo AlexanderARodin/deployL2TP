@@ -5,6 +5,9 @@ help:
 	@sudo apt update
 	@sudo apt install -y xl2tpd
 
+replace.configs:
+	@sudo cp -vrfb ./rootpath/* /
+
 journal:
 	@sudo journalctl -xeu xl2tpd
 status:
