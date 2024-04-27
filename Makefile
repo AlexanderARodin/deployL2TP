@@ -11,7 +11,7 @@ replace.configs:
 edit:
 	@sudo editor /etc/xl2tpd/xl2tpd.conf
 edit.secrets:
-	@sudo editor /etc/ppp/options.l2tpd
+	@sudo editor /etc/ppp/chap-secrets
 
 journal:
 	@sudo journalctl -xeu xl2tpd
